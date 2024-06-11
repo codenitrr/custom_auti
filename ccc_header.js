@@ -1,18 +1,20 @@
 let custom_auti = { "lang": "nl", "page": "home" };
 
 function log_custom() {
-    console.log(custom_auti)
+    console.log(custom_auti);
 }
 
-$(document).ready(function (log_custom) {
-    if ($('.ProductTemplate_Responsive').length = 1) {
+$(document).ready(function () {
+    if ($('.ProductTemplate_Responsive').length === 1) {
         custom_auti.page = "product";
     }
- ]if ($('.ShowProductCategoryHolder').length = 1) {
+    if ($('.ShowProductCategoryHolder').length === 1) {
         custom_auti.page = "category";
     }
-}
     
+    log_custom();
+});
+
 $(document).ready(function () {
     let textnl = "3 Willekeurige tangles met korting";
     let textde = "3 Zufällige Verwicklungen mit Rabatt";
@@ -28,7 +30,6 @@ $(document).ready(function () {
             $('select[name="product_attribute[4882851]"] option[value="39487410"]').text(textfr);
             break;
     }
+});
 
-};
-
-console.log("ccc v1 loaded ");
+console.log("ccc v1 loaded");
