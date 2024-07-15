@@ -40,4 +40,4 @@ $(document).ready(function () {
 });
 
 
-console.log("ccc v1 loaded");
+console.log("ccc v2 loaded");
