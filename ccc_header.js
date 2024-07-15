@@ -19,17 +19,25 @@ $(document).ready(function () {
     let textnl = "3 Willekeurige tangles met korting";
     let textde = "3 Zufällige Verwicklungen mit Rabatt";
     let textfr = "3 Des enchevêtrements aléatoires au rabais";
+
+    function updateOptionText(language, text) {
+        $('select[name="product_attribute[4882851]"] option').filter(function () {
+            return $(this).val() == "39487410";
+        }).text(text);
+    }
+
     switch (custom_auti.lang) {
         case "nl":
-            $('select[name="product_attribute[4882851]"] option[value="39487410"]').text(textnl);
+            updateOptionText("nl", textnl);
             break;
         case "de":
-            $('select[name="product_attribute[4882851]"] option[value="39487410"]').text(textde);
+            updateOptionText("de", textde);
             break;
         case "fr":
-            $('select[name="product_attribute[4882851]"] option[value="39487410"]').text(textfr);
+            updateOptionText("fr", textfr);
             break;
     }
 });
+
 
 console.log("ccc v1 loaded");
